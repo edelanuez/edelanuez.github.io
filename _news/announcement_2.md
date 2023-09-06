@@ -1,7 +1,7 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: I am presenting at the <a href="https://eecs.berkeley.edu/" target="_blank">Race, Reform, and Multiracial Democracy Convening at the Charles Hamilton Houston Institute for Race and Social Justice (CHHIRJ)</a> 
+date: 2023-09-21 16:11:00-0400
 inline: false
 related_posts: false
 ---

@@ -4,4 +4,4 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 4
-cv_pdf: emarie_cv_pdf.pdf
+cv_pdf: CV_FOR_PERSONAL_WEBSITE.pdf

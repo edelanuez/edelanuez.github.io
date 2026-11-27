@@ -180,11 +180,11 @@ window.SITE = {
     {
       title: "iphone",
       photos: [
-        { src: "img/photos/iphone-01.jpg", caption: "iphone 01" },
-        { src: "img/photos/iphone-02.jpg", caption: "iphone 02" },
-        { src: "img/photos/iphone-03.jpg", caption: "iphone 03" },
-        { src: "img/photos/iphone-05.jpg", caption: "iphone 04" },
-        { src: "img/photos/iphone-06.jpg", caption: "iphone 05" },
+        { src: "img/photos/iphone-01.jpg", caption: "shot on iphone" },
+        { src: "img/photos/iphone-02.jpg", caption: "shot on iphone" },
+        { src: "img/photos/iphone-03.jpg", caption: "shot on iphone" },
+        { src: "img/photos/iphone-05.jpg", caption: "shot on iphone" },
+        { src: "img/photos/iphone-06.jpg", caption: "shot on iphone" },
       ]
     },
     {

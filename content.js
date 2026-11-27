@@ -19,10 +19,10 @@ window.SITE = {
   about: `Hello! I'm Emarie De La Nuez, and this is my personal website. Here I post my art, math,
     projects I'm working on, and other things I like.
     <br><br>
-    I did my undergrad at <a href="https://www.oberlin.edu" target="_blank" rel="noopener">Oberlin College</a>, where I focused on
+    I did my undergrad at Oberlin College, where I focused on
     African political economy, econometrics, and linear programming. After that I did a post-baccalaureate program in mathematics at
-    <a href="https://www.smith.edu" target="_blank" rel="noopener">Smith College</a> and a master's in applied mathematics at
-    <a href="https://math.tufts.edu" target="_blank" rel="noopener">Tufts University</a>.
+    Smith College and a master's in applied mathematics at
+    Tufts University.
     <br><br>
     If you need to contact me, I can be reached here: <a href="mailto:emdelanuez@outlook.com">emdelanuez@outlook.com</a>.`,
 

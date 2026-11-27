@@ -193,6 +193,12 @@ window.SITE = {
     }
   ],
 
+  /* LISTENING: songs for the opt-in "what i'm listening to" player.
+     Paste the Spotify song link (Share → Copy Song Link). Nothing loads from Spotify until a visitor clicks.
+     { title, artist, spotify: "https://open.spotify.com/track/..." } */
+  LISTENING: [
+  ],
+
   /* MISC: anything. { title, text, link? } */
   MISC: [
     { title: "running", text: "Philly Marathon, Newport Marathon (2024)" },

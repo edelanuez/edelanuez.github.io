@@ -247,3 +247,18 @@ figcaption .note{display:block;font:italic 300 14px/1.45 var(--serif);color:var(
 .enc-group{scroll-margin-top:70px}
 .photo-group{margin-bottom:44px}
 .camera{font:12px/1 var(--mono);letter-spacing:.08em;color:var(--muted);margin:0 0 14px;padding-bottom:10px;border-bottom:1px dotted rgba(18,42,85,.3)}
+
+/* opt-in listening */
+.listen{position:fixed;right:clamp(12px,3vw,28px);bottom:clamp(12px,3vw,24px);z-index:40;max-width:min(340px,calc(100vw - 24px));opacity:0;pointer-events:none;transition:opacity .8s .4s}
+.s-dry .listen{opacity:1;pointer-events:auto}
+.listen-toggle{font:12px/1 var(--mono);letter-spacing:.04em;background:var(--prussian-deep);color:var(--paper);border:0;border-radius:999px;padding:10px 14px;cursor:pointer;box-shadow:0 10px 24px -12px rgba(15,44,99,.7);float:right}
+.listen-toggle:hover{background:var(--ink)}
+.listen-panel{clear:both;margin-bottom:10px;background:var(--paper);border:1px solid rgba(18,42,85,.25);padding:14px;box-shadow:0 20px 40px -24px rgba(15,44,99,.6)}
+.listen-panel{position:absolute;right:0;bottom:44px;width:min(340px,calc(100vw - 24px))}
+.listen-note{font:11px/1.4 var(--mono);color:var(--muted);margin:0 0 8px}
+.listen-list{list-style:none;margin:0;padding:0;max-height:40vh;overflow:auto}
+.listen-list button{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px dotted rgba(18,42,85,.25);padding:8px 2px;cursor:pointer;color:var(--ink);font:inherit}
+.listen-list button b{display:block;font-weight:400;font-size:15px}
+.listen-list button span{font:11px var(--mono);color:var(--muted)}
+.listen-list button:hover b,.listen-list button.on b{color:var(--prussian)}
+.listen-player iframe{display:block;margin-top:10px;border-radius:12px}

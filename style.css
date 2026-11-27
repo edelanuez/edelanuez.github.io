@@ -178,8 +178,8 @@ figure{margin:0}
 figcaption{font:12px/1.5 var(--mono);color:var(--muted);margin-top:8px}
 figcaption b{font:italic 400 15px var(--serif);color:var(--ink);display:block}
 
-.masonry{columns:3 260px;column-gap:16px}
-.masonry figure{break-inside:avoid;margin:0 0 16px;cursor:zoom-in;position:relative}
+.masonry{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;align-items:start}
+.masonry figure{margin:0;cursor:zoom-in;position:relative}
 .masonry img{width:100%;display:block;transition:filter .6s, transform .6s}
 .masonry.cyan-on img{filter:url(#cyan)}
 .masonry.cyan-on figure:hover img{filter:none}
@@ -246,3 +246,4 @@ dialog button{position:fixed;top:14px;right:18px;background:none;border:0;color:
 figcaption .note{display:block;font:italic 300 14px/1.45 var(--serif);color:var(--ink);margin-top:4px}
 .chips a.chip{text-decoration:none}
 .enc-group{scroll-margin-top:70px}
+.camera{font:12px/1 var(--mono);letter-spacing:.06em;color:var(--muted);margin:-14px 0 24px}

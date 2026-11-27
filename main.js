@@ -59,6 +59,7 @@
       <div class="tags"><span>${it.length ? it.length + " seen" : "coming soon"}</span></div>
     </a>`;
   })();
+  $("[data-camera]").textContent = S.photosCamera || "";
   const photos = $("[data-photos]");
   photos.innerHTML = S.PHOTOS.length
     ? S.PHOTOS.map(p => `<figure data-full="${esc(p.src)}"><img src="${esc(p.src)}" alt="${esc(p.caption || "photograph")}" loading="lazy">

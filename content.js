@@ -160,14 +160,14 @@ window.SITE = {
     ]
   },
 
-  /* PHOTOS: { src, caption }. Samples below are placeholders; replace with your own. */
+  /* PHOTOS: { src, caption }. Newest at the top of the list shows first. */
+  photosCamera: "shot on a panasonic lumix g7",
   PHOTOS: [
-    { src: "img/photos/sample-2.jpg", caption: "sample" },
-    { src: "img/photos/sample-1.jpg", caption: "sample" },
-    { src: "img/photos/sample-3.jpg", caption: "sample" },
-    { src: "img/photos/sample-4.jpg", caption: "sample" },
-    { src: "img/photos/sample-5.jpg", caption: "sample" },
-    { src: "img/photos/sample-6.jpg", caption: "sample" }
+    { src: "img/photos/P1080724.jpg", caption: "" },
+    { src: "img/photos/P1080726.jpg", caption: "" },
+    { src: "img/photos/P1080852.jpg", caption: "" },
+    { src: "img/photos/P1080989.jpg", caption: "" },
+    { src: "img/photos/P1080999.jpg", caption: "" },
   ],
 
   /* MISC: anything. { title, text, link? } */

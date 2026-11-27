@@ -233,6 +233,11 @@ window.SITE = {
       images: [],
       reason: ""
     },
+    {
+      title: "naruto",
+      images: [],
+      reason: "never quit on your dreams!"
+    },
   ],
 
   /* MISC: anything. { title, text, link? } */

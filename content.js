@@ -210,9 +210,14 @@ window.SITE = {
   /* or a whole playlist (used when set); also only loads after a click */
   LISTENING_PLAYLIST: "",
 
-  /* MEDIA: books, films, shows, albums, anything that really meant something to me.
-     { title, by, kind: "book" | "film" | "show" | "album" | ..., note } */
+  /* MEDIA: things that really meant something to me. Each entry is its own block.
+     { title, images: ["img/media/..."], reason } */
   MEDIA: [
+    {
+      title: "attack on titan, chapter 137",
+      images: ["img/media/aot-137-1.jpg", "img/media/aot-137-2.jpg"],
+      reason: "what running feels like to me"
+    },
   ],
 
   /* MISC: anything. { title, text, link? } */

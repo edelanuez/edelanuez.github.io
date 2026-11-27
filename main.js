@@ -71,7 +71,11 @@
 
   const M = S.MEDIA || [];
   $("[data-media]").innerHTML = M.length
-    ? M.map(m => `<div class="item"><b>${esc(m.kind || "")}</b><span class="t">${esc(m.title)}</span>${m.by ? `<span class="by">${esc(m.by)}</span>` : ""}${m.note ? `<p>${esc(m.note)}</p>` : ""}</div>`).join("")
+    ? M.map(m => `<article class="media-item">
+        <h3>${esc(m.title)}</h3>
+        ${(m.images || []).length ? `<div class="media-imgs">${m.images.map(src => `<figure data-full="${esc(src)}"><img src="${esc(src)}" alt="${esc(m.title)}" loading="lazy"></figure>`).join("")}</div>` : ""}
+        ${m.reason ? `<p class="reason"><span>reason:</span> ${esc(m.reason)}</p>` : ""}
+      </article>`).join("")
     : `<div class="empty">coming soon</div>`;
   if ($("[data-asof]")) $("[data-asof]").textContent = S.lastUpdated ? "as of " + S.lastUpdated : "";
 

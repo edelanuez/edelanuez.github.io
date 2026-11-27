@@ -223,6 +223,11 @@ window.SITE = {
       images: ["img/media/aot-71.jpg"],
       reason: "anytime i am a bit discouraged, i am reminded of this panel and i feel better somehow"
     },
+    {
+      title: "dune messiah",
+      images: [],
+      reason: "prescience is a curse as much as it is a gift"
+    },
   ],
 
   /* MISC: anything. { title, text, link? } */

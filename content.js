@@ -41,9 +41,9 @@ window.SITE = {
     },
     {
       title: "topology, optimal transport & redistricting",
-      blurb: "With the MGGG Redistricting Lab (mentor: Moon Duchin): applying the Mapper algorithm and Gromov–Wasserstein distances to study gerrymandering, as part of data-science work for civil rights.",
+      blurb: "With the MGGG Redistricting Lab: applying the Mapper algorithm and Gromov–Wasserstein distances to study gerrymandering, as part of data-science work for civil rights.",
       tags: ["topological data analysis", "Mapper", "Gromov–Wasserstein", "optimal transport", "clustering", "social choice"],
-      link: "https://mggg.org"
+      link: ""
     },
     {
       title: "spatial environmental risk (PFAS)",

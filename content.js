@@ -200,9 +200,16 @@ window.SITE = {
      Paste the Spotify song link (Share → Copy Song Link). Nothing loads from Spotify until a visitor clicks.
      { title, artist, spotify: "https://open.spotify.com/track/..." } */
   LISTENING: [
+    { title: "Sailing", artist: "Christopher Cross", spotify: "" },
+    { title: "Midnight Run", artist: "Charley Crockett", spotify: "" },
+    { title: "The Thrill", artist: "Wiz Khalifa, Empire of the Sun", spotify: "" },
+    { title: "Die Hard", artist: "Kendrick Lamar, Blxst, Amanda Reifer", spotify: "" },
+    { title: "EVERBLUE", artist: "Omoinotake", spotify: "" },
+    { title: "Everywhere", artist: "Fleetwood Mac", spotify: "" },
+    { title: "ルミナス (Luminous)", artist: "ClariS", spotify: "" },
   ],
   /* or a whole playlist (used when set); also only loads after a click */
-  LISTENING_PLAYLIST: "https://open.spotify.com/playlist/4IvEmqBzREf0dLtRdw1cLb",
+  LISTENING_PLAYLIST: "",
 
   /* MISC: anything. { title, text, link? } */
   MISC: [

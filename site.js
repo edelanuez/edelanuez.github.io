@@ -9,7 +9,7 @@
 
   /* ---------- music: opt-in, nothing loads from Spotify until clicked ---------- */
   const plId = (String(S.LISTENING_PLAYLIST || "").match(/playlist\/([A-Za-z0-9]+)/) || [])[1];
-  const L = S.LISTENING || [];
+  const L = (S.LISTENING || []).filter(t => /track\/[A-Za-z0-9]+/.test(t.spotify || ""));
   const trackId = u => (String(u).match(/track\/([A-Za-z0-9]+)/) || [])[1];
   if (plId || L.length) {
     const box = document.createElement("aside");

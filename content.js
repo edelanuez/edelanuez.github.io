@@ -111,9 +111,12 @@ window.SITE = {
       ]
     },
     origami: {
-      blurb: "",
+      blurb: "I don't have a lot of photos of my origami. I've managed to find some things, but I'll keep better track now.",
       pieces: [
-        // { src: "img/art/origami/crane.jpg", title: "crane", year: "", note: "" },
+        { src: "img/art/origami/seahorse.jpg", title: "seahorse", year: "", note: "design by Michael G. LaFosse" },
+        { src: "img/art/origami/frogs.jpg", title: "frogs", year: "", note: "" },
+        { src: "img/art/origami/roses.jpg", title: "roses", year: "", note: "" },
+        { src: "img/art/origami/lilies-on-dashboard.jpg", title: "lilies on the dashboard", year: "", note: "" },
       ]
     },
     textiles: {

@@ -95,6 +95,17 @@ window.SITE = {
             { src: "img/art/cyanotype/finished-prints/bound-book.jpg", title: "stab-bound book", year: "", note: "" },
             { src: "img/art/cyanotype/finished-prints/bound-book-in-progress.jpg", title: "stab-bound book, in progress", year: "", note: "" },
           ]
+        },
+        {
+          title: "photo album pages",
+          pieces: [
+            { src: "img/art/cyanotype/photo-album-pages/page-1.jpg", title: "page 1", year: "", note: "" },
+            { src: "img/art/cyanotype/photo-album-pages/page-2.jpg", title: "page 2", year: "", note: "" },
+            { src: "img/art/cyanotype/photo-album-pages/page-3.jpg", title: "page 3", year: "", note: "" },
+            { src: "img/art/cyanotype/photo-album-pages/page-4.jpg", title: "page 4", year: "", note: "" },
+            { src: "img/art/cyanotype/photo-album-pages/page-5.jpg", title: "page 5", year: "", note: "" },
+            { src: "img/art/cyanotype/photo-album-pages/page-6.jpg", title: "page 6", year: "", note: "" },
+          ]
         }
       ]
     },

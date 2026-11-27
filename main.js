@@ -69,53 +69,12 @@
   $("[data-misc]").innerHTML = S.MISC.map(m =>
     `<div class="item"><b>${esc(m.title)}</b>${m.link ? `<a href="${esc(m.link)}" target="_blank" rel="noopener">${esc(m.text)}</a>` : esc(m.text)}</div>`).join("");
 
-  /* opt-in listening list: no Spotify request until a song is clicked */
-  const L = S.LISTENING || [];
-  const trackId = u => (String(u).match(/track\/([A-Za-z0-9]+)/) || [])[1];
-  const plId = (String(S.LISTENING_PLAYLIST || "").match(/playlist\/([A-Za-z0-9]+)/) || [])[1];
-  if (plId) {
-    const box = $("#listen"), tog = $("#listen-toggle"), panel = $("#listen-panel"), player = $("[data-player]");
-    box.hidden = false;
-    $(".listen-note").textContent = "a playlist of what i'm into lately. press play to load it (from spotify).";
-    $("[data-listening]").innerHTML = `<li><button type="button" data-pl><b>▶ play</b><span>loads the spotify player</span></button></li>`;
-    tog.addEventListener("click", () => { const open = panel.hidden; panel.hidden = !open; tog.setAttribute("aria-expanded", open); });
-    $("[data-listening]").addEventListener("click", e => {
-      if (!e.target.closest("button[data-pl]")) return;
-      $("[data-listening]").hidden = true;
-      player.innerHTML = `<iframe title="Spotify playlist" src="https://open.spotify.com/embed/playlist/${plId}?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
-    });
-  } else if (L.length) {
-    const box = $("#listen"), tog = $("#listen-toggle"), panel = $("#listen-panel"), player = $("[data-player]");
-    box.hidden = false;
-    $("[data-listening]").innerHTML = L.map((t, i) =>
-      `<li><button type="button" data-i="${i}"><b>${esc(t.title)}</b><span>${esc(t.artist || "")}</span></button></li>`).join("");
-    tog.addEventListener("click", () => {
-      const open = panel.hidden; panel.hidden = !open; tog.setAttribute("aria-expanded", open);
-    });
-    $("[data-listening]").addEventListener("click", e => {
-      const b = e.target.closest("button[data-i]"); if (!b) return;
-      const id = trackId(L[b.dataset.i].spotify); if (!id) return;
-      $$(".listen-list button").forEach(x => x.classList.toggle("on", x === b));
-      player.innerHTML = `<iframe title="Spotify player" src="https://open.spotify.com/embed/track/${id}?utm_source=generator&theme=0" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
-    });
-  }
-
   /* photo tone toggle */
   $("#tone").addEventListener("click", e => {
     const on = photos.classList.toggle("cyan-on"); photos.querySelectorAll(".masonry").forEach(m => m.classList.toggle("cyan-on", on));
     e.currentTarget.setAttribute("aria-pressed", on);
   });
 
-  /* lightbox */
-  const lb = $("#lightbox");
-  document.addEventListener("click", e => {
-    const f = e.target.closest("figure[data-full]");
-    if (!f) return;
-    $("img", lb).src = f.dataset.full;
-    $("p", lb).textContent = f.querySelector("figcaption")?.textContent || "";
-    lb.showModal();
-  });
-  lb.addEventListener("click", e => { if (e.target === lb || e.target.tagName === "BUTTON") lb.close(); });
 
 
   /* ---------- the print sequence ---------- */

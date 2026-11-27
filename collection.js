@@ -30,12 +30,4 @@
     .map(k => `<a href="${k}.html"${k === key ? ' class="on" aria-current="page"' : ""}>${k}</a>`).join("");
   $("[data-year]").textContent = new Date().getFullYear();
 
-  const lb = $("#lightbox");
-  document.addEventListener("click", e => {
-    const f = e.target.closest("figure[data-full]"); if (!f) return;
-    $("img", lb).src = f.dataset.full;
-    $("p", lb).textContent = f.querySelector("figcaption")?.textContent || "";
-    lb.showModal();
-  });
-  lb.addEventListener("click", e => { if (e.target === lb || e.target.tagName === "BUTTON") lb.close(); });
 })();

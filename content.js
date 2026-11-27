@@ -6,6 +6,8 @@
    ========================================================= */
 
 window.SITE = {
+  lastUpdated: "november 2026",   // shown in the footer and misc; change when you update
+
   name: { print: "Emarie", full: "Emarie R. De La Nuez" },
   tagline: "applied mathematics · decisions under uncertainty · art · photographs",
 
@@ -210,6 +212,11 @@ window.SITE = {
   ],
   /* or a whole playlist (used when set); also only loads after a click */
   LISTENING_PLAYLIST: "",
+
+  /* MEDIA: books, films, shows, albums, anything that really meant something to me.
+     { title, by, kind: "book" | "film" | "show" | "album" | ..., note } */
+  MEDIA: [
+  ],
 
   /* MISC: anything. { title, text, link? } */
   MISC: [

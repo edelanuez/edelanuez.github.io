@@ -28,6 +28,5 @@
 
   $("[data-pagenav]").innerHTML = [...Object.keys(S.ART), "encounters"]
     .map(k => `<a href="${k}.html"${k === key ? ' class="on" aria-current="page"' : ""}>${k}</a>`).join("");
-  $("[data-year]").textContent = new Date().getFullYear();
 
 })();

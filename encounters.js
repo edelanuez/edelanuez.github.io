@@ -6,7 +6,6 @@
 
   $("[data-blurb]").innerHTML = E.blurb || "";
   $$("[data-cv]").forEach(a => (a.href = S.contact.cv));
-  $("[data-year]").textContent = new Date().getFullYear();
   $("[data-pagenav]").innerHTML = [...Object.keys(S.ART), "encounters"]
     .map(k => `<a href="${k}.html"${k === "encounters" ? ' class="on" aria-current="page"' : ""}>${k}</a>`).join("");
 

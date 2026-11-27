@@ -39,6 +39,10 @@
     });
   }
 
+  /* "last updated" footer on every page (re-applied after page switches) */
+  const stamp = () => document.querySelectorAll("[data-updated]").forEach(el => (el.textContent = S.lastUpdated ? "last updated " + S.lastUpdated : ""));
+  stamp(); new MutationObserver(stamp).observe(document.body, { childList: true });
+
   /* ---------- lightbox (one handler for every page) ---------- */
   document.addEventListener("click", e => {
     const lb = $("#lightbox"); if (!lb) return;

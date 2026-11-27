@@ -262,3 +262,12 @@ figcaption .note{display:block;font:italic 300 14px/1.45 var(--serif);color:var(
 .listen-list button span{font:11px var(--mono);color:var(--muted)}
 .listen-list button:hover b,.listen-list button.on b{color:var(--prussian)}
 .listen-player iframe{display:block;margin-top:10px;border-radius:12px}
+
+.asof{font:12px/1 var(--mono);letter-spacing:.06em;color:var(--muted);margin-left:auto}
+.section-note{margin:-12px 0 22px;color:var(--muted);font-weight:300}
+.media{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0 28px}
+.media .item{padding:16px 0;border-top:1px solid rgba(18,42,85,.2)}
+.media .item b{display:block;font:12px/1.4 var(--mono);letter-spacing:.08em;color:var(--muted);font-weight:400;margin-bottom:6px}
+.media .item .t{display:block;font-style:italic;font-size:1.2rem;line-height:1.3}
+.media .item .by{display:block;font:12px/1.6 var(--mono);color:var(--muted)}
+.media .item p{margin:8px 0 0;font-weight:300}

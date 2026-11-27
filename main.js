@@ -13,7 +13,6 @@
       d += `<circle cx="${cx.toFixed(0)}" cy="${cy.toFixed(0)}" r="${(1.6 + r() * 2.4).toFixed(1)}" fill="#e2875a" opacity="${(.35 + r() * .5).toFixed(2)}"/>`; }
     $(".rinse .speck").innerHTML = `<svg viewBox="0 0 1600 840" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">${d}</svg>`; }
   $("[data-about]").innerHTML = S.about;
-  $("[data-year]").textContent = new Date().getFullYear();
   $$("[data-cv]").forEach(a => (a.href = S.contact.cv));
 
   const c = S.contact;
@@ -65,6 +64,12 @@
       <div class="masonry">${g.photos.map(p => `<figure data-full="${esc(p.src)}"><img src="${esc(p.src)}" alt="${esc(p.caption || "photograph")}" loading="lazy">
         ${p.caption ? `<figcaption>${esc(p.caption)}</figcaption>` : ""}</figure>`).join("")}</div>
     </div>`).join("");
+
+  const M = S.MEDIA || [];
+  $("[data-media]").innerHTML = M.length
+    ? M.map(m => `<div class="item"><b>${esc(m.kind || "")}</b><span class="t">${esc(m.title)}</span>${m.by ? `<span class="by">${esc(m.by)}</span>` : ""}${m.note ? `<p>${esc(m.note)}</p>` : ""}</div>`).join("")
+    : `<div class="empty">coming soon</div>`;
+  if ($("[data-asof]")) $("[data-asof]").textContent = S.lastUpdated ? "as of " + S.lastUpdated : "";
 
   $("[data-misc]").innerHTML = S.MISC.map(m =>
     `<div class="item"><b>${esc(m.title)}</b>${m.link ? `<a href="${esc(m.link)}" target="_blank" rel="noopener">${esc(m.text)}</a>` : esc(m.text)}</div>`).join("");

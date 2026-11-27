@@ -228,6 +228,11 @@ window.SITE = {
       images: [],
       reason: "prescience is a curse as much as it is a gift"
     },
+    {
+      title: "mister rogers' neighborhood",
+      images: [],
+      reason: ""
+    },
   ],
 
   /* MISC: anything. { title, text, link? } */

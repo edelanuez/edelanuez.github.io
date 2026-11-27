@@ -198,6 +198,8 @@ window.SITE = {
      { title, artist, spotify: "https://open.spotify.com/track/..." } */
   LISTENING: [
   ],
+  /* or a whole playlist (used when set); also only loads after a click */
+  LISTENING_PLAYLIST: "https://open.spotify.com/playlist/4IvEmqBzREf0dLtRdw1cLb",
 
   /* MISC: anything. { title, text, link? } */
   MISC: [

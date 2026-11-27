@@ -72,7 +72,19 @@
   /* opt-in listening list: no Spotify request until a song is clicked */
   const L = S.LISTENING || [];
   const trackId = u => (String(u).match(/track\/([A-Za-z0-9]+)/) || [])[1];
-  if (L.length) {
+  const plId = (String(S.LISTENING_PLAYLIST || "").match(/playlist\/([A-Za-z0-9]+)/) || [])[1];
+  if (plId) {
+    const box = $("#listen"), tog = $("#listen-toggle"), panel = $("#listen-panel"), player = $("[data-player]");
+    box.hidden = false;
+    $(".listen-note").textContent = "a playlist of what i'm into lately. press play to load it (from spotify).";
+    $("[data-listening]").innerHTML = `<li><button type="button" data-pl><b>▶ play</b><span>loads the spotify player</span></button></li>`;
+    tog.addEventListener("click", () => { const open = panel.hidden; panel.hidden = !open; tog.setAttribute("aria-expanded", open); });
+    $("[data-listening]").addEventListener("click", e => {
+      if (!e.target.closest("button[data-pl]")) return;
+      $("[data-listening]").hidden = true;
+      player.innerHTML = `<iframe title="Spotify playlist" src="https://open.spotify.com/embed/playlist/${plId}?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+    });
+  } else if (L.length) {
     const box = $("#listen"), tog = $("#listen-toggle"), panel = $("#listen-panel"), player = $("[data-player]");
     box.hidden = false;
     $("[data-listening]").innerHTML = L.map((t, i) =>

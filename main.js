@@ -58,12 +58,16 @@
       <div class="tags"><span>${it.length ? it.length + " seen" : "coming soon"}</span></div>
     </a>`;
   })();
-  const photos = $("[data-photos]");
-  photos.innerHTML = S.PHOTOS.map(g => `<div class="photo-group">
-      ${g.title ? `<p class="camera">${esc(g.title)}</p>` : ""}
-      <div class="masonry">${g.photos.map(p => `<figure data-full="${esc(p.src)}"><img src="${esc(p.src)}" alt="${esc(p.caption || "photograph")}" loading="lazy">
-        ${p.caption ? `<figcaption>${esc(p.caption)}</figcaption>` : ""}</figure>`).join("")}</div>
-    </div>`).join("");
+  const sl = t => String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  $("[data-photos]").innerHTML = S.PHOTOS.map((g, i) => {
+    const cover = g.photos[0];
+    return `<a class="print plate-link" href="photos.html#${sl(g.title || "photos")}">
+      ${cover ? `<span class="cover" style="background-image:url('${esc(cover.src)}')"></span>` : ""}
+      <span class="n">roll ${String(i + 1).padStart(2, "0")}</span><span class="go">→</span>
+      <h4>${esc(g.title || "photos")}</h4>
+      <div class="tags"><span>${g.photos.length} ${g.photos.length === 1 ? "photo" : "photos"}</span></div>
+    </a>`;
+  }).join("");
 
   const M = S.MEDIA || [];
   $("[data-media]").innerHTML = M.length
@@ -74,11 +78,7 @@
   $("[data-misc]").innerHTML = S.MISC.map(m =>
     `<div class="item"><b>${esc(m.title)}</b>${m.link ? `<a href="${esc(m.link)}" target="_blank" rel="noopener">${esc(m.text)}</a>` : esc(m.text)}</div>`).join("");
 
-  /* photo tone toggle */
-  $("#tone").addEventListener("click", e => {
-    const on = photos.classList.toggle("cyan-on"); photos.querySelectorAll(".masonry").forEach(m => m.classList.toggle("cyan-on", on));
-    e.currentTarget.setAttribute("aria-pressed", on);
-  });
+
 
 
 

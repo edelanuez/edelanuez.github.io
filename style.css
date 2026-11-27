@@ -271,3 +271,4 @@ figcaption .note{display:block;font:italic 300 14px/1.45 var(--serif);color:var(
 .media .item .t{display:block;font-style:italic;font-size:1.2rem;line-height:1.3}
 .media .item .by{display:block;font:12px/1.6 var(--mono);color:var(--muted)}
 .media .item p{margin:8px 0 0;font-weight:300}
+.page-head h1 .tone{vertical-align:middle;margin-left:14px;font-style:normal}

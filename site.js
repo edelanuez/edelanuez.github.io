@@ -55,7 +55,7 @@
 
   /* ---------- page switching without reloading ---------- */
   const KEEP = el => el.id === "listen" || el.classList?.contains("defs");
-  const pageScripts = ["main.js", "collection.js", "encounters.js"];
+  const pageScripts = ["main.js", "collection.js", "encounters.js", "photos.js"];
 
   async function go(url, push) {
     let html;

@@ -72,7 +72,7 @@
   const M = S.MEDIA || [];
   $("[data-media]").innerHTML = M.length
     ? M.map(m => `<article class="media-item">
-        <h3>${esc(m.title)}</h3>
+        <h3>${esc(m.title)}${m.kind ? `, <em>${esc(m.kind)}</em>` : ""}</h3>
         ${(m.images || []).length ? `<div class="media-imgs">${m.images.map(src => `<figure data-full="${esc(src)}"><img src="${esc(src)}" alt="${esc(m.title)}" loading="lazy"></figure>`).join("")}</div>` : ""}
         ${m.reason ? `<p class="reason"><span>reason:</span> ${esc(m.reason)}</p>` : ""}
       </article>`).join("")

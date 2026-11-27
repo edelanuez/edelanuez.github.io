@@ -239,7 +239,7 @@ window.SITE = {
     },
     {
       title: "naruto",
-      kind: "anime",
+      kind: "manga",
       images: [],
       reason: "never quit on your dreams!"
     },

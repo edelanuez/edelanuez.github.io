@@ -70,13 +70,13 @@
   }).join("");
 
   const M = S.MEDIA || [];
-  $("[data-media]").innerHTML = M.length
-    ? M.map(m => `<article class="media-item">
-        <h3>${esc(m.title)}${m.kind ? `, <em>${esc(m.kind)}</em>` : ""}</h3>
-        ${(m.images || []).length ? `<div class="media-imgs">${m.images.map(src => `<figure data-full="${esc(src)}"><img src="${esc(src)}" alt="${esc(m.title)}" loading="lazy"></figure>`).join("")}</div>` : ""}
-        ${m.reason ? `<p class="reason"><span>reason:</span> ${esc(m.reason)}</p>` : ""}
-      </article>`).join("")
-    : `<div class="empty">coming soon</div>`;
+  const firstImg = (M.find(m => (m.images || []).length) || {}).images;
+  $("[data-media]").innerHTML = `<a class="print plate-link" href="media.html">
+      ${firstImg ? `<span class="cover" style="background-image:url('${esc(firstImg[0])}')"></span>` : ""}
+      <span class="n">shelf</span><span class="go">→</span>
+      <h4>media</h4>
+      <div class="tags"><span>${M.length} ${M.length === 1 ? "thing" : "things"}</span></div>
+    </a>`;
   if ($("[data-asof]")) $("[data-asof]").textContent = S.lastUpdated ? "as of " + S.lastUpdated : "";
 
   $("[data-misc]").innerHTML = S.MISC.map(m =>

@@ -200,13 +200,13 @@ window.SITE = {
      Paste the Spotify song link (Share → Copy Song Link). Nothing loads from Spotify until a visitor clicks.
      { title, artist, spotify: "https://open.spotify.com/track/..." } */
   LISTENING: [
-    { title: "Sailing", artist: "Christopher Cross", spotify: "" },
-    { title: "Midnight Run", artist: "Charley Crockett", spotify: "" },
-    { title: "The Thrill", artist: "Wiz Khalifa, Empire of the Sun", spotify: "" },
-    { title: "Die Hard", artist: "Kendrick Lamar, Blxst, Amanda Reifer", spotify: "" },
-    { title: "EVERBLUE", artist: "Omoinotake", spotify: "" },
-    { title: "Everywhere", artist: "Fleetwood Mac", spotify: "" },
-    { title: "ルミナス (Luminous)", artist: "ClariS", spotify: "" },
+    { title: "Sailing", artist: "Christopher Cross", spotify: "https://open.spotify.com/track/6YIeSw2cTNQRWbuxWvRPsW" },
+    { title: "Midnight Run", artist: "Charley Crockett", spotify: "https://open.spotify.com/track/0Kyr1asI6ETruhE7jK7inR" },
+    { title: "The Thrill", artist: "Wiz Khalifa, Empire of the Sun", spotify: "https://open.spotify.com/track/4wqzOaLxiCRy2Et8tRyNSX" },
+    { title: "Die Hard", artist: "Kendrick Lamar, Blxst, Amanda Reifer", spotify: "https://open.spotify.com/track/2g6tReTlM2Akp41g0HaeXN" },
+    { title: "EVERBLUE", artist: "Omoinotake", spotify: "https://open.spotify.com/track/5RmtuRIe8FJg9FRegwCqzW" },
+    { title: "Everywhere", artist: "Fleetwood Mac", spotify: "https://open.spotify.com/track/254bXAqt3zP6P50BdQvEsq" },
+    { title: "ルミナス (Luminous)", artist: "ClariS", spotify: "https://open.spotify.com/track/1t1rGn7F2btHJWxqcsEGq2" },
   ],
   /* or a whole playlist (used when set); also only loads after a click */
   LISTENING_PLAYLIST: "",

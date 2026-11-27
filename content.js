@@ -215,26 +215,31 @@ window.SITE = {
   MEDIA: [
     {
       title: "attack on titan, chapter 137",
+      kind: "manga",
       images: ["img/media/aot-137-1.jpg", "img/media/aot-137-2.jpg"],
       reason: "what running feels like to me"
     },
     {
       title: "attack on titan, chapter 71",
+      kind: "manga",
       images: ["img/media/aot-71.jpg"],
       reason: "anytime i am a bit discouraged, i am reminded of this panel and i feel better somehow"
     },
     {
       title: "dune messiah",
+      kind: "book",
       images: [],
       reason: "prescience is a curse as much as it is a gift"
     },
     {
       title: "mister rogers' neighborhood",
+      kind: "tv show",
       images: [],
       reason: ""
     },
     {
       title: "naruto",
+      kind: "anime",
       images: [],
       reason: "never quit on your dreams!"
     },

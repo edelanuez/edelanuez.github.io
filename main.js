@@ -59,19 +59,19 @@
       <div class="tags"><span>${it.length ? it.length + " seen" : "coming soon"}</span></div>
     </a>`;
   })();
-  $("[data-camera]").textContent = S.photosCamera || "";
   const photos = $("[data-photos]");
-  photos.innerHTML = S.PHOTOS.length
-    ? S.PHOTOS.map(p => `<figure data-full="${esc(p.src)}"><img src="${esc(p.src)}" alt="${esc(p.caption || "photograph")}" loading="lazy">
-        ${p.caption ? `<figcaption>${esc(p.caption)}</figcaption>` : ""}</figure>`).join("")
-    : empty("photos", "img/photos/");
+  photos.innerHTML = S.PHOTOS.map(g => `<div class="photo-group">
+      ${g.title ? `<p class="camera">${esc(g.title)}</p>` : ""}
+      <div class="masonry">${g.photos.map(p => `<figure data-full="${esc(p.src)}"><img src="${esc(p.src)}" alt="${esc(p.caption || "photograph")}" loading="lazy">
+        ${p.caption ? `<figcaption>${esc(p.caption)}</figcaption>` : ""}</figure>`).join("")}</div>
+    </div>`).join("");
 
   $("[data-misc]").innerHTML = S.MISC.map(m =>
     `<div class="item"><b>${esc(m.title)}</b>${m.link ? `<a href="${esc(m.link)}" target="_blank" rel="noopener">${esc(m.text)}</a>` : esc(m.text)}</div>`).join("");
 
   /* photo tone toggle */
   $("#tone").addEventListener("click", e => {
-    const on = photos.classList.toggle("cyan-on");
+    const on = photos.classList.toggle("cyan-on"); photos.querySelectorAll(".masonry").forEach(m => m.classList.toggle("cyan-on", on));
     e.currentTarget.setAttribute("aria-pressed", on);
   });
 

@@ -160,14 +160,37 @@ window.SITE = {
     ]
   },
 
-  /* PHOTOS: { src, caption }. Newest at the top of the list shows first. */
-  photosCamera: "shot on a panasonic lumix g7",
+  /* PHOTOS: grouped by camera. Each group gets its own heading.
+     Add a photo: put it in img/photos/ and add { src, caption } to the right group. */
   PHOTOS: [
-    { src: "img/photos/P1080724.jpg", caption: "" },
-    { src: "img/photos/P1080726.jpg", caption: "" },
-    { src: "img/photos/P1080852.jpg", caption: "" },
-    { src: "img/photos/P1080989.jpg", caption: "" },
-    { src: "img/photos/P1080999.jpg", caption: "" },
+    {
+      title: "panasonic lumix g7",
+      photos: [
+        { src: "img/photos/P1080724.jpg", caption: "" },
+        { src: "img/photos/P1080726.jpg", caption: "" },
+        { src: "img/photos/P1080852.jpg", caption: "" },
+        { src: "img/photos/P1080989.jpg", caption: "" },
+        { src: "img/photos/P1080999.jpg", caption: "" },
+      ]
+    },
+    {
+      title: "iphone",
+      photos: [
+        { src: "img/photos/iphone-01.jpg", caption: "iphone 01" },
+        { src: "img/photos/iphone-02.jpg", caption: "iphone 02" },
+        { src: "img/photos/iphone-03.jpg", caption: "iphone 03" },
+        { src: "img/photos/iphone-04.jpg", caption: "iphone 04" },
+        { src: "img/photos/iphone-05.jpg", caption: "iphone 05" },
+        { src: "img/photos/iphone-06.jpg", caption: "iphone 06" },
+      ]
+    },
+    {
+      title: "other",
+      photos: [
+        { src: "img/photos/trampoline.jpg", caption: "me on trampoline" },
+        { src: "img/photos/instax-montreal.jpg", caption: "instax dump: montreal" },
+      ]
+    }
   ],
 
   /* MISC: anything. { title, text, link? } */

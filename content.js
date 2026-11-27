@@ -196,7 +196,7 @@ window.SITE = {
   /* MISC: anything. { title, text, link? } */
   MISC: [
     { title: "running", text: "AACR Philadelphia Marathon, 2023." },
-    { title: "currently reading", text: "TODO" },
-    { title: "notes", text: "TODO: talks, links, things I like" }
+    { title: "currently reading", text: "Children of Dune (Dune series)" },
+    { title: "quote that is resonating with me right now", text: "“But the wind that day was slightly warm, and it felt so good just running.”" }
   ]
 };

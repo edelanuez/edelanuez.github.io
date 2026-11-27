@@ -67,7 +67,8 @@ window.SITE = {
     ceramics: {
       blurb: "",
       pieces: [
-        // { src: "img/art/ceramics/bowl.jpg", title: "speckled bowl", year: "2025", note: "stoneware" },
+        { src: "img/art/ceramics/plate.jpg", title: "plate", year: "", note: "" },
+        { src: "img/art/ceramics/vase-wip-1.jpg", title: "vase", year: "", note: "work in progress, photo 1" },
       ]
     },
     cyanotype: {

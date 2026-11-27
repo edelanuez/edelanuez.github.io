@@ -107,7 +107,6 @@ window.SITE = {
             { src: "img/art/cyanotype/photo-album-pages/page-3.jpg", title: "page 3", year: "", note: "" },
             { src: "img/art/cyanotype/photo-album-pages/page-4.jpg", title: "page 4", year: "", note: "" },
             { src: "img/art/cyanotype/photo-album-pages/page-5.jpg", title: "page 5", year: "", note: "" },
-            { src: "img/art/cyanotype/photo-album-pages/page-6.jpg", title: "page 6", year: "", note: "" },
           ]
         }
       ]
@@ -184,15 +183,13 @@ window.SITE = {
         { src: "img/photos/iphone-01.jpg", caption: "iphone 01" },
         { src: "img/photos/iphone-02.jpg", caption: "iphone 02" },
         { src: "img/photos/iphone-03.jpg", caption: "iphone 03" },
-        { src: "img/photos/iphone-04.jpg", caption: "iphone 04" },
-        { src: "img/photos/iphone-05.jpg", caption: "iphone 05" },
-        { src: "img/photos/iphone-06.jpg", caption: "iphone 06" },
+        { src: "img/photos/iphone-05.jpg", caption: "iphone 04" },
+        { src: "img/photos/iphone-06.jpg", caption: "iphone 05" },
       ]
     },
     {
       title: "other",
       photos: [
-        { src: "img/photos/trampoline.jpg", caption: "me on trampoline" },
         { src: "img/photos/instax-montreal.jpg", caption: "instax dump: montreal" },
       ]
     }

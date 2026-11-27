@@ -133,6 +133,7 @@ window.SITE = {
         { src: "img/art/textiles/indigo-book-page-2.jpg", title: "indigo book, page", year: "", note: "" },
         { src: "img/art/textiles/indigo-book-page-3.jpg", title: "indigo book, page", year: "", note: "" },
         { src: "img/art/textiles/silk-scarf.jpg", title: "hand-painted silk scarf", year: "", note: "" },
+        { src: "img/art/textiles/figure.jpg", title: "figure", year: "", note: "" },
       ]
     }
   },
@@ -145,6 +146,17 @@ window.SITE = {
     blurb: "Art I've come across out in the world that stayed with me. Sorted by where I found it: galleries in New York, and other countries.",
     items: [
       // { src: "img/encounters/2026-11-gagosian.jpg", title: "untitled", artist: "artist name", where: "New York · Gagosian", date: "2026-11-20", note: "why it stuck with me" },
+      { src: "img/encounters/encounter-01.jpg", title: "", artist: "", where: "", date: "", note: "" },
+      { src: "img/encounters/encounter-02.jpg", title: "", artist: "", where: "", date: "", note: "" },
+      { src: "img/encounters/encounter-03.jpg", title: "", artist: "", where: "", date: "", note: "" },
+      { src: "img/encounters/encounter-04.jpg", title: "", artist: "", where: "", date: "", note: "" },
+      { src: "img/encounters/encounter-05.jpg", title: "", artist: "", where: "", date: "", note: "" },
+      { src: "img/encounters/encounter-06.jpg", title: "", artist: "", where: "", date: "", note: "" },
+      { src: "img/encounters/encounter-07.jpg", title: "", artist: "", where: "", date: "", note: "" },
+      { src: "img/encounters/encounter-08.jpg", title: "", artist: "", where: "", date: "", note: "" },
+      { src: "img/encounters/encounter-09.jpg", title: "", artist: "", where: "", date: "", note: "" },
+      { src: "img/encounters/encounter-10.jpg", title: "", artist: "", where: "", date: "", note: "" },
+      { src: "img/encounters/encounter-11.jpg", title: "", artist: "", where: "", date: "", note: "" },
     ]
   },
 

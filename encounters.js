@@ -14,7 +14,7 @@
   const items = [...E.items].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
   const groups = new Map();
   for (const it of items) {
-    const w = (it.where || "elsewhere").trim();
+    const w = (it.where || "unsorted").trim();
     const nyc = /^new york/i.test(w);
     const g = nyc ? "nyc galleries" : w.toLowerCase();
     if (!groups.has(g)) groups.set(g, []);
@@ -25,7 +25,7 @@
 
   const fmt = d => { if (!d) return ""; const t = new Date(d + "T12:00:00"); return isNaN(t) ? d : t.toLocaleDateString("en-US", { month: "short", year: "numeric" }).toLowerCase(); };
   const card = it => `<figure data-full="${esc(it.src)}"><img src="${esc(it.src)}" alt="${esc([it.title, it.artist].filter(Boolean).join(" by ") || "artwork")}" loading="lazy">
-    <figcaption><b>${esc(it.title || "untitled")}</b>${esc([it.artist, it.sub, fmt(it.date)].filter(Boolean).join(" · "))}${it.note ? `<span class="note">${esc(it.note)}</span>` : ""}</figcaption></figure>`;
+    <figcaption>${it.title ? `<b>${esc(it.title)}</b>` : ""}${esc([it.artist, it.sub, fmt(it.date)].filter(Boolean).join(" · "))}${it.note ? `<span class="note">${esc(it.note)}</span>` : ""}</figcaption></figure>`;
 
   const chips = $("[data-chips]"), body = $("[data-groups]");
   if (!items.length) {

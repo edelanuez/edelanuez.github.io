@@ -218,6 +218,11 @@ window.SITE = {
       images: ["img/media/aot-137-1.jpg", "img/media/aot-137-2.jpg"],
       reason: "what running feels like to me"
     },
+    {
+      title: "attack on titan, chapter 71",
+      images: ["img/media/aot-71.jpg"],
+      reason: "anytime i am a bit discouraged, i am reminded of this panel and i feel better somehow"
+    },
   ],
 
   /* MISC: anything. { title, text, link? } */
